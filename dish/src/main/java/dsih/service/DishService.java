@@ -3,11 +3,13 @@ package dsih.service;
 import domain.model.Dish;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface DishService {
-    Dish save(Dish dish);
+    Dish add(Dish dish);
+    boolean update(Dish dish);
     List<Dish> findAllDish();
-    Dish finDishById(int id);
-    Dish findDishByName(String name);
+    Optional<Dish> finDishById(int id);
+    List<Dish> findDishByName(String name);
     boolean deleteDish(int id);
 }
