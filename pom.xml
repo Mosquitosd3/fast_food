@@ -18,8 +18,8 @@
         <module>delivery</module>
         <module>kitchen</module>
         <module>payment</module>
-        <module>notification</module>
         <module>domain</module>
+        <module>notification</module>
     </modules>
 
     <properties>

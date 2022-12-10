@@ -17,26 +17,6 @@ public class MemStoreOrder {
     private final AtomicInteger generate = new AtomicInteger(2);
 
     public MemStoreOrder() {
-        store.put(1,
-                new Order(1,
-                        null,
-                        null,
-                        new ArrayList<>(),
-                        100.0,
-                        LocalDateTime.now(),
-                        false
-                )
-        );
-        store.put(2,
-                new Order(2,
-                        null,
-                        null,
-                        new ArrayList<>(),
-                        75.10,
-                        LocalDateTime.now(),
-                        false
-                )
-        );
     }
 
     public Order save(Order order) {

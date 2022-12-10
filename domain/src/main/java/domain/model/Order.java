@@ -17,7 +17,6 @@ public class Order {
     @EqualsAndHashCode.Include
     private int id;
     private User consumer;
-    private Courier courier;
     private List<Dish> dishes = new ArrayList<>();
     private double totalPrice;
     private LocalDateTime created;
