@@ -1,8 +1,10 @@
 package notification.service;
 
 import domain.model.Order;
+import notification.model.Notification;
 import notification.repository.memRep.NotificationMemStore;
 import org.springframework.stereotype.Service;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,11 +17,11 @@ public class NotificationService {
         this.store = store;
     }
 
-    public Order saveOrder(Order order) {
-        return store.save(order);
+    public Notification saveOrder(Notification notification) {
+        return store.save(notification);
     }
 
-    public List<Order> findAllOrder() {
+    public List<Notification> findAllOrder() {
         return new ArrayList<>(store.findAll());
     }
 }

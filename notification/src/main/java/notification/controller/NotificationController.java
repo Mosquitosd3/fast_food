@@ -1,6 +1,7 @@
 package notification.controller;
 
 import domain.model.Order;
+import notification.model.Notification;
 import notification.service.NotificationService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,8 +21,8 @@ public class NotificationController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Order>> findAllOrder() {
-        return new ResponseEntity<List<Order>>(
+    public ResponseEntity<List<Notification>> findAllOrder() {
+        return new ResponseEntity<List<Notification>>(
                 service.findAllOrder(),
                 HttpStatus.OK
         );

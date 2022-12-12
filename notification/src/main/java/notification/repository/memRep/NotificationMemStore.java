@@ -3,6 +3,7 @@ package notification.repository.memRep;
 import domain.model.Order;
 import domain.model.Role;
 import domain.model.User;
+import notification.model.Notification;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
@@ -14,7 +15,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Repository
 public class NotificationMemStore {
-    private final Map<Integer, Order> store =  new ConcurrentHashMap<>();
+    private final Map<Integer, Notification> store =  new ConcurrentHashMap<>();
     private final AtomicInteger generate = new AtomicInteger(1);
 
     public NotificationMemStore() {
@@ -33,20 +34,21 @@ public class NotificationMemStore {
                 LocalDateTime.now(),
                 false
         );
-        store.put(1, order);
+
+        store.put(1, new Notification(order));
     }
 
-    public Order save(Order order) {
-        if (order.getId() == 0) {
+    public Notification save(Notification notification) {
+        if (notification.getId() == 0) {
             int id = generate.incrementAndGet();
-            order.setId(id);
-            return store.put(id, order);
+            notification.setId(id);
+            return store.put(id, notification);
         } else {
-            return store.put(order.getId(), order);
+            return store.put(notification.getId(), notification);
         }
     }
 
-    public Collection<Order> findAll() {
+    public Collection<Notification> findAll() {
         return store.values();
     }
 }
