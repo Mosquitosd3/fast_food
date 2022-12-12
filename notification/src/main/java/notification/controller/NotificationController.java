@@ -1,7 +1,6 @@
 package notification.controller;
 
-import domain.model.Order;
-import notification.model.Notification;
+import domain.model.Notification;
 import notification.service.NotificationService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

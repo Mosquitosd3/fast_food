@@ -1,4 +1,4 @@
-package notification.model;
+package domain.model;
 
 import domain.model.Dish;
 import domain.model.Order;

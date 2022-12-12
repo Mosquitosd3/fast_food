@@ -2,7 +2,7 @@ package notification.controller;
 
 import domain.model.Order;
 
-import notification.model.Notification;
+import domain.model.Notification;
 import notification.service.NotificationService;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.kafka.annotation.KafkaListener;

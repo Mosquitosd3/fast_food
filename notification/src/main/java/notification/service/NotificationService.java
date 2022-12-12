@@ -1,7 +1,6 @@
 package notification.service;
 
-import domain.model.Order;
-import notification.model.Notification;
+import domain.model.Notification;
 import notification.repository.memRep.NotificationMemStore;
 import org.springframework.stereotype.Service;
 

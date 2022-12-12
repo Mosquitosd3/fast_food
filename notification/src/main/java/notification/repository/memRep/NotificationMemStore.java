@@ -3,7 +3,7 @@ package notification.repository.memRep;
 import domain.model.Order;
 import domain.model.Role;
 import domain.model.User;
-import notification.model.Notification;
+import domain.model.Notification;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
